@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Train;
+
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,4 @@ use App\Models\Train;
 |
 */
 
-Route::get('/', function () {
-
-    $trains = Train::all();
-
-    return view('home', compact('trains'));
-});
+Route::get('/', [PagesController::class, 'index']);

@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->boolean('seats_available')->default(1);
-            $table->tinyInteger('restaurants')->after('num_carrozze')->default(1);
+
+            $table->date('date')->default(date('Ymd'));
         });
     }
 
@@ -23,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn(['seats_available', 'restaurants']);
+            $table->dropColumn('date');
         });
     }
 };
