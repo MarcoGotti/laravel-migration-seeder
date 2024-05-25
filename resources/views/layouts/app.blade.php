@@ -20,7 +20,7 @@
         
         @include('partials.header')
 
-        <main>
+        <main class="bg-danger p-4">
             @yield('content')
         </main>
 
