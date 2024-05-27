@@ -10,8 +10,8 @@ class PagesController extends Controller
     public function index()
     {
         $trains = Train::all();
-        //$trains = Train::where('date', date('Ymd'));
-        //$trains = Train::where('date', '2024 - 05 - 25');
+        //$trains = Train::where('date', now())->get();
+        //$trains = Train::where('date', '2024 - 05 - 27')->get();
 
         // !!! non riesco a filtrare per date !!!
 

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
 
-            $table->date('date')->default(date('Ymd'));
+            $table->date('date')->default(now());
             // !!! questa cosa della date non mi convince !!!
         });
     }
